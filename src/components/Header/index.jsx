@@ -27,12 +27,12 @@ handleKeyUp=(event)=>{
              return
      }
 
-
         //将todoobj传递给app
          this.props.addTodo({id:nanoid(),name:target.value,done:false})
-        target.value=""
+         target.value=""
+    
+      }
 
-     }
      
 
 

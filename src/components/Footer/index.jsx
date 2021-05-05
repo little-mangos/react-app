@@ -2,13 +2,15 @@ import React, { Component } from 'react'
 import "./index.css"
 export default class Footer extends Component {
 
+  
   handleCheckAll=(event)=>{
 
 
-this.props.checkAllTodo(event.target.checked)
+    this.props.checkAllTodo(event.target.checked)
 
 
   }
+  
 
   handleClearAllDone=()=>{
 
@@ -23,6 +25,7 @@ this.props.clearAllDone()
     render() {
 
     const {todos}=this.props
+    
 //已完成个数
 const doneCount=todos.reduce((pre,todo)=>pre+(todo.done?1:0),0)
 const total=todos.length

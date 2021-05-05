@@ -4,6 +4,7 @@ import "./index.css"
 import Item  from "../Item"
 
 export default class List extends Component {
+  
   static propTypes={
     todos:PropTypes.array.isRequired,
     updateTodo:PropTypes.func.isRequired,
@@ -21,7 +22,7 @@ export default class List extends Component {
                   {
 
                 todos.map((todo)=>{
-                      return <Item key={todo.id} {...todo} updateTodo={updateTodo} deleteTodo={deleteTodo}/>
+                      return <Item key={todo.id} {...todo}  updateTodo={updateTodo} deleteTodo={deleteTodo}/>
 
 
 

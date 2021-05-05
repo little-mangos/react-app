@@ -15,6 +15,7 @@ todos:[
 }
 
 
+//添加一个todo对象
 addTodo=(todoObj)=>{
 //获取原来的todo对象
 const {todos}=this.state;
@@ -25,6 +26,8 @@ this.setState({todos:newtodos})
 
 }
 
+
+修改一个对象
 updateTodo=(id,done)=>{
 const {todos}=this.state
 const newtodos=todos.map((todoObj)=>{
@@ -34,11 +37,13 @@ else return todoObj
 })
 this.setState({todos:newtodos})
 
-
-
-
 }
 
+
+
+
+
+//删除一个对象
 deleteTodo=(id)=>{
 const {todos}=this.state
 const newTodos=todos.filter((todoObj)=>{
@@ -54,6 +59,9 @@ this.setState({todos:newTodos})
 
 }
 
+
+
+//全不选和全不选
 checkAllTodo=(done)=>{
   const {todos}=this.state
  const newtodos=todos.map((todoObj)=>{
@@ -68,6 +76,9 @@ this.setState({todos:newtodos})
 }
 
 
+
+
+//清除所有已完成
 clearAllDone=()=>{
 
   const {todos}=this.state
