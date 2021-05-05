@@ -29,10 +29,11 @@ this.setState({todos:newtodos})
 
 修改一个对象
 updateTodo=(id,done)=>{
+  console.log(id,done)
 const {todos}=this.state
-const newtodos=todos.map((todoObj)=>{
-if(todoObj.id===id)return {...todoObj,done}
-else return todoObj
+const newtodos=todos.map((item)=>{
+if(item.id===id)return {...item,done}
+else return item
 
 })
 this.setState({todos:newtodos})
